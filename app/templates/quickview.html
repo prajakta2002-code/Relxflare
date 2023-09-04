@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+#text{
+
+font-size: 10px !important;
+
+}
+#text2{
+
+font-size: 10px !important;
+
+}
+#text3{
+
+font-size: 40px !important;
+
+}
+
+</style>
+
+</head>
+<body>
+    
+</body>
+</html>
+
+{% load static %}
+
+{% block body %}
+
+ 
+
+
+<section class="bg0 p-t-23 p-b-140" style="padding-top: 6%;" style="background-color: grey;">
+
+ 
+
+ 
+
+ 
+
+<div class="book-details" >
+
+    <img src="{{ productlist.images.url }}" alt="{{ productlist.brand }}" height="250px" width="170px">
+
+    <br>
+
+    <h1 style="font-size: 40px;">Name of the book: {{ productlist.brand }}</h1>
+
+    <br>
+
+    <h2 id="text2">Price:{{productlist.price}}</h2>
+
+    <br>
+
+    <h2 id="text3">Description:{{productlist.description}}</h2>
+
+ 
+
+</div>
+
+</section>
+
+{% endblock %}

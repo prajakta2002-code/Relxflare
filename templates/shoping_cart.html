@@ -1,0 +1,118 @@
+{% load static %}
+{% block body %}
+
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Form</title>
+<style>
+        /* Center the form and button */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+ 
+
+        /* Style the form container */
+        .form-container {
+            text-align: center;
+        }
+
+ 
+
+        /* Style the input fields */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+ 
+
+        .stext-111 {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+ 
+
+        /* Style the textarea */
+        textarea.stext-111 {
+            resize: none;
+        }
+
+ 
+
+        /* Style the submit button */
+        .submit-button {
+            background-color: #4CAF50; /* Green color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+ 
+
+        /* Hover effect for the submit button */
+        .submit-button:hover {
+            background-color: #45a049; /* Darker green color on hover */
+        }
+</style>
+</head>
+<body>
+
+ 
+
+<!-- payment/templates/payment/payment_form.html -->
+<div class="form-container">
+<h1>Payment Form</h1>
+<form method="post">
+        {% csrf_token %}
+<div class="form-group">
+<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="atm" id="atm" placeholder="Please Enter the Card Number" required>
+</div>
+
+ 
+
+        <div class="form-group">
+<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="cvv" id="cvv" placeholder="Please Enter the CVV" required>
+</div>
+
+ 
+
+        <div class="form-group">
+<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="amount" id="amount" placeholder="Enter the Amount" required>
+</div>
+
+ 
+
+        <div class="form-group bor8 m-b-30">
+<textarea class="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" name="help" id="help" placeholder="Any Queries"></textarea>
+</div>
+
+ 
+
+        <button type="submit" class="submit-button">Submit Payment</button>
+</form>
+</div>
+
+ 
+
+</body>
+</html>
+
+ 
+
+ 
+
+{% endblock %}
